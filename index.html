@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laine Sátiro—Photographer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Laine Sátiro</a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#about">Sobre</a></li>
+    <li><a href="#contact">Contato</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+      <line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-tag">fotografa · Est. 2025</p>
+    <h1 class="hero-name">Registros<br><em>De instantes</em><br>inteiros</h1>
+    <p class="hero-desc">Fotografia documental e artística, eternizando a beleza sutil das conexões humanas e os instantes que dão cor à vida</p>
+    <a href="#portfolio" class="hero-cta">
+      Ver Portfolio
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="2" y1="9" x2="16" y2="9"/><polyline points="10,3 16,9 10,15"/>
+      </svg>
+    </a>
+  </div>
+  <div class="hero-right">
+    <img src="image/lai_cam.jpg" alt="Portrait" class="hero-img-main">
+    <div class="hero-stat-strip">
+      <div class="hero-stat">
+        <span class="hero-stat-num">10+</span>
+        <span class="hero-stat-label">Projetos</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">10</span>
+        <span class="hero-stat-label">anos</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">50+</span>
+        <span class="hero-stat-label">Clientes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee">
+    <span>Portratos</span><span class="sep">·</span>
+    <span>Landscape</span><span class="sep">·</span>
+    <span>Casamentos</span><span class="sep">·</span>
+    <span>Cobertura esportiva</span><span class="sep">·</span>
+    <span>Comercial</span><span class="sep">·</span>
+    <span>Street</span><span class="sep">·</span>
+    <span>Portrato</span><span class="sep">·</span>
+    <span>Editorial</span><span class="sep">·</span>
+    <span>Landscape</span><span class="sep">·</span>
+    <span>Casamentos</span><span class="sep">·</span>
+    <span>Cobertura esportiva</span><span class="sep">·</span>
+    <span>Comercial</span><span class="sep">·</span>
+    <span>Street</span><span class="sep">·</span>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="portfolio-header">
+    <div class="portfolio-header-left">
+      <p class="section-tag">Trabalhos selecionados</p>
+      <h2 class="section-title">O <em>Portfolio</em></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="portrait">Portrato</button>
+      <button class="filter-btn" data-filter="landscape">Landscape</button>
+      <button class="filter-btn" data-filter="wedding">Noivado</button>
+  
+    </div>
+  </div>
+
+  <div class="grid">
+    
+    <div class="grid-item g1 reveal" data-cat="portrait" onclick="openLightbox('https://images.unspla.com/photo-1531746020798-e6953c6e8e04?w=1600&q=90','Solitude', 'Portrait')">
+    
+        <img src="image/amigaDeirma.jpg" alt="Solitude"> <!-------------------------image-->
+    
+        <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Portrato</span>Solitude</div></div>
+    </div>
+    
+    <div class="grid-item g2 reveal" data-cat="landscape" onclick="openLightbox('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90','Alpine Morning','Landscape')">
+      
+        <img src="image/landscape.jpg" alt="Alpine Morning"><!-------------------------image-->
+
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Landscape</span>Alpine Morning</div></div>
+    </div>
+    
+    <div class="grid-item g3 reveal" data-cat="portrait" onclick="openLightbox('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1600&q=90','Noir Study','Editorial')">
+     
+        <img src="image/portatroSards.jpg" alt="Noir Study"><!-------------------------image-->
+     
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Portrato</span>Arena Fonte Nova</div></div>
+    </div>
+    
+    <div class="grid-item g4 reveal" data-cat="wedding" onclick="openLightbox('https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=90','First Dance','Wedding')">
+     
+        <img src="image/casamento.jpg" alt="First Dance"><!-------------------------image-->
+     
+        <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Noivado</span>First Dance</div></div>
+    </div>
+    
+    <div class="grid-item g5 reveal" data-cat="portrait" onclick="openLightbox('https://images.unsplash.com/photo-1552058544-f2b08422138a?w=1600&q=90','Still Light','Portrait')">
+    
+        <img src="image/sards.jpg" alt="Still Light"><!-------------------------image-->
+    
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Portrato</span>Arena Fonte Nova</div></div>
+    </div>
+    <div class="grid-item g6 reveal" data-cat="landscape" onclick="openLightbox('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&q=90','Dusk Road','Landscape')">
+      <img src="image/landscape2.jpg" alt="Dusk Road">
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Landscape</span>Elevador lacerda</div></div>
+    </div>
+    <div class="grid-item g7 reveal" data-cat="wedding" onclick="openLightbox('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1600&q=90','Structure','Editorial')">
+      <img src="image/editorial.jpg" alt="Structure">
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Noivado</span>Golden Hour</div></div>
+    </div>
+    <div class="grid-item g8 reveal" data-cat="landscape" onclick="openLightbox('https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1600&q=90','Golden Hour','Wedding')">
+      <img src="image/darkscape.jpeg" alt="Golden Hour">
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Landscape</span>Dark hours</div></div>
+    </div>
+    <div class="grid-item g9 reveal" data-cat="landscape" onclick="openLightbox('https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1600&q=90','Cascade','Landscape')">
+      <img src="image/landscape4.jpeg" alt="Cascade">
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Landscape</span>Cascade</div></div>
+    </div>
+    <div class="grid-item g10 reveal" data-cat="wedding" onclick="openLightbox('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=1600&q=90','Presence','Portrait')">
+      <img src="image/inspo.jpg" alt="Presence">
+      <div class="grid-item-overlay"><div class="grid-item-label"><span class="grid-item-cat">Noivado</span>Presence</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-img-wrap reveal">
+    <img src="image/camera.jpeg" alt="Elena Vasquez" class="about-img">
+    <div class="about-img-accent"></div>
+  </div>
+  <div class="about-content reveal">
+    <p class="section-tag">A Artista</p>
+    <h2 class="section-title">Uma Vida <br><em>Através das Lentes</em></h2>
+    <p class="about-body">sou laine satiro e sou chata salvaodorrrr bahiaaa, e tambem sou chata e nao mandei biografia pra meu irmao</p>
+    <blockquote class="about-quote">"Fotografar é traduzir em luz aquilo que as palavras não conseguem alcançar."</blockquote>
+    <p class="about-body">Com anos de dedicação à fotografia autoral e comercial, meu olhar já percorreu diversas narrativas visuais, capturando a energia única da Bahia e colaborando em projetos que buscam a verdade em cada clique.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <p class="section-tag">Clientes</p>
+  <h2 class="section-title">Memórias<br><em>Que Ecoam</em></h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <span class="testi-quote-mark">"</span>
+      <p class="testi-text">laine tira fotos muitos boas, eu fiquei tipo uau, mas pedi pra ela editar minha unha ela nao editou</p>
+      <div class="testi-author">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&q=80" alt="Sofia & Marco" class="testi-avatar">
+        <div>
+          <span class="testi-name">Laura e Matheus</span>
+          <span class="testi-role">Casamento, 2025</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="testi-quote-mark">"</span>
+      <p class="testi-text">Ser fotografada por Lai foi muito mais do que um ensaio, foi uma experiência linda. Me ver através do olhar dela foi especial demais. Seu trabalho é incrível, cheio de alma e significado.</p>
+      <div class="testi-author">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&q=80" alt="David Chen" class="testi-avatar">
+        <div>
+          <span class="testi-name">Bea</span>
+          <span class="testi-role">Menina, amiga</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <span class="testi-quote-mark">"</span>
+      <p class="testi-text">sem palavras.</p>
+      <div class="testi-author">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Isabelle Moreau" class="testi-avatar">
+        <div>
+          <span class="testi-name">Bahia</span>
+          <span class="testi-role">Sardinhas, do Dique</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-left reveal">
+    <p class="section-tag">Comece uma História</p>
+    <h2 class="section-title">Vamos Iniciar<br><em>uma Conversa</em></h2>
+    <div class="contact-info">
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 16 16"><path d="M2 4l6 5 6-5M2 4h12v9H2z"/></svg>
+        </div>
+        <div class="contact-info-text">
+          <span class="contact-info-label">Email</span>
+          LaineSatiro@gmail.com
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 16 16"><path d="M8 1C5.24 1 3 3.24 3 6c0 4 5 9 5 9s5-5 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/></svg>
+        </div>
+        <div class="contact-info-text">
+          <span class="contact-info-label">Studio</span>
+          Bucket of water, Salvador, Brazil
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <svg viewBox="0 0 16 16"><rect x="3" y="1" width="10" height="14" rx="2"/><line x1="8" y1="12" x2="8" y2="12" stroke-linecap="round" stroke-width="2"/></svg>
+        </div>
+        <div class="contact-info-text">
+          <span class="contact-info-label">Telefone</span>
+          +55 71 9180-1905
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">First Name</label>
+        <input type="text" name="First_name"  class="form-input" placeholder="Laine" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Last Name</label>
+        <input type="text" name="last_name"   class="form-input" placeholder="Satiro" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Email Address</label>
+      <input type="email" name="email" class="form-input" placeholder="abcd@example.com" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">servico interessado</label>
+      <select name="service" class="form-select form-input">
+        <option value="">escolha um servico</option>
+        <option>Portrato </option>
+        <option>Casamentos</option>
+        <option>Comercial</option>
+        
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Mensagem</label>
+      <textarea class="form-textarea" name="message" placeholder="Me conte sobre o seu servico" required></textarea>
+    </div>
+    <button type="submit" class="form-submit">Enviar→</button>
+    <p id="form-success" style="display:none; font-size:0.8rem; color:var(--accent-dark); margin-top:0.5rem; font-style:italic;">Obrigada — Entrarei em contato em 24 horas .</p>
+    <p id="form-error" style="display:none; font-size:0.8rem; color:#c0392b; margin-top:0.5rem;">Algo deu errado. Tente novamente.</p>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Laine Sátiro</span>
+  <span class="footer-copy">© 2025 Laine Sátiro Fotogragia.</span>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/laifotografias/" target="_blank">Instagram</a>
+    <a href="https://vsco.co/lai-satiro/gallery" target="_blank">VSCO</a>
+    <a href="https://www.linkedin.com/in/laíne-sátiro-0ba06a39a/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">Close ✕</button>
+  <img src="" alt="" class="lightbox-img" id="lightbox-img">
+  <div class="lightbox-caption">
+    <span class="lightbox-caption-title" id="lightbox-title"></span>
+    <span class="lightbox-caption-cat" id="lightbox-cat"></span>
+  </div>
+</div>
+
+<script src="script.js"> </script>
+</body>
+</html>
